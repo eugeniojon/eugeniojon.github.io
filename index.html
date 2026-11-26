@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小区一级毛_小区毛线手作_社区编织社群</title>
+<meta name="description" content="小区一级毛是社区编织手作社群的品牌站点，收录小区毛线团购、编织教程、作品展、公益织暖活动与邻里编织社群动态，适合小区居民、编织新手和手工爱好者了解与参与。">
+<meta name="keywords" content="毛线团购,编织教程,社区手作,织暖公益,邻里编织">
+<style>
+:root{
+  --brand:#b1452c;
+  --brand-dark:#8a3220;
+  --brand-soft:#f6e7e1;
+  --accent:#2f6d5f;
+  --accent-soft:#e3f0ec;
+  --ink:#241d1a;
+  --ink-2:#4a3f39;
+  --ink-3:#786a62;
+  --line:#e6ddd6;
+  --bg:#fbf8f5;
+  --panel:#ffffff;
+  --panel-2:#f4eee8;
+  --gold:#c08a2e;
+  --radius:14px;
+  --radius-s:9px;
+  --shadow:0 1px 2px rgba(36,29,26,.05),0 8px 24px rgba(36,29,26,.06);
+  --shadow-s:0 1px 2px rgba(36,29,26,.06);
+  --head-h:64px;
+  --notice-h:38px;
+  --maxw:1320px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;letter-spacing:.01em}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:20px}
+li{margin:4px 0}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #2f6d5f;outline-offset:2px;border-radius:4px}
+section[id],div[id]{scroll-margin-top:calc(var(--head-h) + var(--notice-h) + 12px)}
+
+/* ============ 公告条 ============ */
+.notice{
+  height:var(--notice-h);background:var(--brand-dark);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;letter-spacing:.02em;padding:0 16px;
+}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:#ffcf8a;margin-right:9px;flex:none;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.notice-in{max-width:var(--maxw);width:100%;display:flex;align-items:center;justify-content:center;gap:10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.notice b{color:#ffd9b0;font-weight:600}
+
+/* ============ 页头 ============ */
+.header{
+  position:sticky;top:0;z-index:60;background:rgba(251,248,245,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+.header-in{
+  max-width:var(--maxw);margin:0 auto;padding:0 20px;height:var(--head-h);
+  display:flex;align-items:center;gap:22px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{width:38px;height:38px;flex:none}
+.logo-text{font-size:19px;font-weight:800;letter-spacing:.04em;color:var(--ink);white-space:nowrap}
+.logo-text small{display:block;font-size:10px;font-weight:500;letter-spacing:.18em;color:var(--ink-3);line-height:1.2}
+.nav{display:flex;gap:2px;flex-wrap:wrap;margin-left:6px}
+.nav a{
+  display:block;padding:7px 11px;border-radius:999px;font-size:14.5px;color:var(--ink-2);
+  white-space:nowrap;
+}
+.nav a:hover{background:var(--brand-soft);color:var(--brand-dark);text-decoration:none}
+.head-tools{margin-left:auto;display:flex;align-items:center;gap:10px}
+.search{
+  display:flex;align-items:center;gap:0;border:1px solid var(--line);border-radius:999px;
+  background:#fff;padding:3px 3px 3px 12px;
+}
+.search input{
+  border:0;background:transparent;font:inherit;font-size:14px;width:150px;color:var(--ink);outline:none;
+}
+.search input::placeholder{color:var(--ink-3)}
+.search button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;padding:6px 14px;font-size:13.5px;
+}
+.search button:hover{background:var(--brand-dark)}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:9px 18px;
+  font-size:14.5px;font-weight:600;border:1px solid transparent;transition:.15s;
+}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-dark);text-decoration:none}
+.btn-ghost{border-color:var(--line);color:var(--ink-2);background:#fff}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-dark);text-decoration:none}
+
+/* ============ 首屏 ============ */
+.hero{
+  position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+  background:linear-gradient(160deg,#fdf7f2 0%,#f7efe8 46%,#eef4f1 100%);
+}
+.hero-in{
+  max-width:var(--maxw);margin:0 auto;padding:52px 20px 46px;
+  display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:5px 14px;font-size:12.5px;color:var(--brand-dark);letter-spacing:.06em;
+  font-weight:600;margin-bottom:18px;box-shadow:var(--shadow-s);
+}
+.hero h1{
+  font-size:clamp(34px,4.6vw,54px);letter-spacing:.05em;color:var(--ink);
+  line-height:1.16;margin-bottom:18px;
+}
+.hero h1 em{font-style:normal;color:var(--brand);position:relative}
+.hero-sub{font-size:17px;color:var(--ink-2);max-width:44ch;margin-bottom:26px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero-meta{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-3)}
+.hero-meta b{display:block;font-size:22px;color:var(--brand-dark);font-weight:800;letter-spacing:.02em;line-height:1.2}
+.hero-visual{position:relative}
+.hero-svg{width:100%;height:auto;display:block;filter:drop-shadow(0 14px 30px rgba(138,50,32,.14))}
+.hero-note{
+  position:absolute;right:-4px;bottom:-6px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);padding:10px 14px;font-size:12.5px;color:var(--ink-2);box-shadow:var(--shadow);
+  max-width:200px;
+}
+.hero-note b{color:var(--brand-dark)}
+
+/* ============ 布局 ============ */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.layout{
+  display:grid;grid-template-columns:180px minmax(0,1fr) 268px;gap:30px;
+  padding:36px 0 20px;align-items:start;
+}
+.channel-col{position:sticky;top:calc(var(--head-h) + var(--notice-h) + 16px)}
+.side-col{position:sticky;top:calc(var(--head-h) + var(--notice-h) + 16px)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-s)}
+.panel-pad{padding:18px}
+.panel-title{
+  font-size:12.5px;letter-spacing:.14em;color:var(--ink-3);font-weight:700;text-transform:uppercase;
+  padding:14px 18px 10px;border-bottom:1px solid var(--line);margin:0;
+}
+.chan-list{list-style:none;margin:0;padding:8px}
+.chan-list a{
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
+  padding:8px 11px;border-radius:var(--radius-s);font-size:14.5px;color:var(--ink-2);
+}
+.chan-list a:hover{background:var(--brand-soft);color:var(--brand-dark);text-decoration:none}
+.chan-list .n{font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+
+/* ============ 主内容区块 ============ */
+.block{margin-bottom:40px}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:6px;flex-wrap:wrap}
+.block-head h2{font-size:22px;letter-spacing:.02em;color:var(--ink)}
+.block-head h2 .k{color:var(--brand)}
+.block-lead{font-size:14px;color:var(--ink-3);margin:0 0 16px;max-width:70ch}
+.more-link{font-size:13.5px;color:var(--brand-dark);font-weight:600;white-space:nowrap}
+.divider{height:1px;background:var(--line);border:0;margin:0 0 18px}
+
+/* 概览 */
+.overview{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 28px;box-shadow:var(--shadow-s);
+}
+.overview p{color:var(--ink-2);font-size:15.5px}
+.overview p:last-child{margin-bottom:0}
+.overview .hl{color:var(--brand-dark);font-weight:600}
+
+/* 精选卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-s);transition:.18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#dccfc5}
+.card-img{position:relative;aspect-ratio:4/3;background:var(--panel-2);overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.card-tag{
+  position:absolute;left:10px;top:10px;background:rgba(36,29,26,.82);color:#fff;
+  font-size:11.5px;padding:3px 9px;border-radius:999px;letter-spacing:.04em;backdrop-filter:blur(4px);
+}
+.card-body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:16px;letter-spacing:.01em;color:var(--ink)}
+.card-body .desc{font-size:13.4px;color:var(--ink-3);line-height:1.65;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{
+  font-size:11.5px;color:var(--brand-dark);background:var(--brand-soft);border-radius:5px;padding:2px 7px;
+  letter-spacing:.02em;white-space:nowrap;
+}
+.tag.green{color:var(--accent);background:var(--accent-soft)}
+.card-foot{
+  display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--ink-3);
+  border-top:1px dashed var(--line);padding-top:9px;margin-top:2px;
+}
+.card-foot .score{color:var(--gold);font-weight:700;font-size:13px}
+
+/* 动态列表 */
+.updates{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:8px 22px}
+.upd{
+  display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:flex-start;
+}
+.upd:nth-last-child(-n+2){border-bottom:0}
+.upd-time{font-size:12px;color:var(--ink-3);white-space:nowrap;width:70px;flex:none;padding-top:3px;font-variant-numeric:tabular-nums}
+.upd-main{min-width:0}
+.upd-main b{display:block;font-size:14.6px;color:var(--ink);font-weight:700;margin-bottom:2px}
+.upd-main span{font-size:13px;color:var(--ink-3);display:block;line-height:1.6}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.cat{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;
+  display:flex;flex-direction:column;gap:6px;transition:.16s;box-shadow:var(--shadow-s);
+}
+.cat:hover{border-color:var(--brand);text-decoration:none;background:#fffdfb}
+.cat b{font-size:15.5px;color:var(--ink)}
+.cat span{font-size:12.5px;color:var(--ink-3);line-height:1.6}
+.cat .cnt{font-size:11.5px;color:var(--brand-dark);font-weight:700;margin-top:2px}
+
+/* 深度解析 */
+.article{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 34px;box-shadow:var(--shadow-s);
+}
+.article h3{
+  font-size:18px;margin:26px 0 10px;color:var(--ink);padding-left:12px;
+  border-left:4px solid var(--brand);line-height:1.4;
+}
+.article h3:first-child{margin-top:0}
+.article p{color:var(--ink-2);font-size:15.3px;line-height:1.85}
+.article ul{color:var(--ink-2);font-size:15.3px}
+.article li{margin:6px 0}
+.article .callout{
+  background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 var(--radius-s) var(--radius-s) 0;
+  padding:14px 18px;margin:16px 0;font-size:14.5px;color:#245045;
+}
+.article table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+.article th,.article td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+.article th{background:var(--panel-2);font-weight:700;color:var(--ink);white-space:nowrap}
+.article td{color:var(--ink-2)}
+
+/* 消费路径步骤 */
+.steps{display:grid;gap:14px}
+.step{
+  display:grid;grid-template-columns:44px 1fr;gap:16px;background:var(--panel);
+  border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow-s);
+}
+.step-n{
+  width:44px;height:44px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;
+  font-size:18px;font-weight:800;letter-spacing:.02em;flex:none;
+}
+.step h4{font-size:15.6px;margin-bottom:4px}
+.step p{font-size:14px;color:var(--ink-3);margin:0}
+.step p b{color:var(--brand-dark)}
+
+/* FAQ */
+.faq{display:grid;gap:10px}
+details{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:0 18px;box-shadow:var(--shadow-s);
+}
+details[open]{border-color:#dccfc5}
+summary{
+  list-style:none;cursor:pointer;padding:14px 26px 14px 0;position:relative;
+  font-size:15.2px;font-weight:600;color:var(--ink);
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";position:absolute;right:0;top:13px;font-size:19px;color:var(--brand);font-weight:400;
+  transition:.2s;line-height:1;
+}
+details[open] summary::after{content:"–"}
+details p{font-size:14.2px;color:var(--ink-2);padding:0 0 16px;margin:0;max-width:72ch}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cmt{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px;
+  box-shadow:var(--shadow-s);
+}
+.cmt-top{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  font-size:13px;font-weight:700;flex:none;letter-spacing:.02em;
+}
+.cmt-name{font-size:13.6px;font-weight:700;color:var(--ink)}
+.cmt-meta{font-size:11.5px;color:var(--ink-3);margin-left:auto;white-space:nowrap}
+.cmt p{font-size:13.6px;color:var(--ink-2);margin:0;line-height:1.7}
+.cmt .on{color:var(--brand-dark);font-weight:600}
+
+/* 资讯 */
+.news{display:grid;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.news-item{
+  display:grid;grid-template-columns:132px 1fr;gap:16px;padding:14px 20px;border-bottom:1px solid var(--line);
+  align-items:center;
+}
+.news-item:last-child{border-bottom:0}
+.news-item:hover{background:#fffdfb}
+.news-item img{width:132px;height:80px;object-fit:cover;border-radius:var(--radius-s);background:var(--panel-2)}
+.news-item h4{font-size:15.2px;margin-bottom:3px;color:var(--ink)}
+.news-item time{font-size:12px;color:var(--brand-dark);font-weight:600;margin-right:8px}
+.news-item p{font-size:13.2px;color:var(--ink-3);margin:0;line-height:1.6}
+
+/* 相关推荐 标签索引 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rec-tags a{
+  display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px;font-size:14px;color:var(--ink-2);box-shadow:var(--shadow-s);
+}
+.rec-tags a:hover{border-color:var(--brand);color:var(--brand-dark);text-decoration:none;background:#fffdfb}
+.rec-tags a i{font-style:normal;font-size:11.5px;color:var(--ink-3)}
+
+/* 榜单 */
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank-row{
+  display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;padding:12px 18px;
+  border-bottom:1px solid var(--line);font-size:14.4px;
+}
+.rank-row:last-child{border-bottom:0}
+.rank-n{
+  font-size:15px;font-weight:800;color:var(--ink-3);font-variant-numeric:tabular-nums;text-align:center;
+}
+.rank-row:nth-child(1) .rank-n{color:#c0392b}
+.rank-row:nth-child(2) .rank-n{color:#c08a2e}
+.rank-row:nth-child(3) .rank-n{color:#2f6d5f}
+.rank-row b{font-weight:600;color:var(--ink)}
+.rank-row small{display:block;font-size:12px;color:var(--ink-3);font-weight:400}
+.rank-bar{width:78px;height:6px;background:var(--panel-2);border-radius:999px;overflow:hidden}
+.rank-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),#d97a5e);border-radius:999px}
+
+/* 侧栏 */
+.side-block{margin-bottom:20px}
+.side-block:last-child{margin-bottom:0}
+.side-list{list-style:none;margin:0;padding:8px}
+.side-list li a{
+  display:block;padding:7px 10px;border-radius:var(--radius-s);font-size:13.6px;color:var(--ink-2);
+  line-height:1.6;
+}
+.side-list li a:hover{background:var(--brand-soft);color:var(--brand-dark);text-decoration:none}
+.side-list .d{font-size:11.5px;color:var(--ink-3);display:block}
+.side-note{padding:14px 18px;font-size:13px;color:var(--ink-3);line-height:1.7}
+.side-note b{color:var(--brand-dark)}
+.mini-tag{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px}
+.mini-tag a{
+  font-size:12.5px;border:1px solid var(--line);border-radius:6px;padding:3px 9px;color:var(--ink-2);background:#fff;
+}
+.mini-tag a:hover{border-color:var(--brand);color:var(--brand-dark);text-decoration:none}
+
+/* 搜索结果条 */
+.search-bar{
+  display:none;align-items:center;gap:12px;background:var(--accent-soft);border:1px solid #c7ded7;
+  border-radius:var(--radius-s);padding:10px 16px;margin-bottom:20px;font-size:13.8px;color:#245045;
+}
+.search-bar.show{display:flex}
+.search-bar button{
+  margin-left:auto;border:0;background:transparent;color:#245045;font-size:13px;text-decoration:underline;
+}
+.no-result{
+  display:none;padding:36px 20px;text-align:center;color:var(--ink-3);font-size:14.5px;
+  background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius);margin-bottom:24px;
+}
+.no-result.show{display:block}
+.hide{display:none !important}
+
+/* 页尾 */
+.footer{background:#241d1a;color:#cdc1b9;margin-top:40px;padding:44px 0 26px;font-size:14px}
+.footer-in{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;padding-bottom:32px;border-bottom:1px solid #3b312c}
+.footer h4{font-size:13px;letter-spacing:.12em;color:#f0e6df;margin-bottom:12px;font-weight:700}
+.footer ul{list-style:none;padding:0;margin:0}
+.footer li{margin:6px 0}
+.footer a{color:#bdb0a7;font-size:13.6px}
+.footer a:hover{color:#fff;text-decoration:none}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand .logo-text{color:#fff}
+.footer-brand .logo-text small{color:#9d9089}
+.footer-desc{color:#a2958d;font-size:13.2px;line-height:1.8;max-width:34ch;margin:0}
+.footer-bottom{padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#8d8078}
+
+/* 响应式 */
+@media (max-width:1180px){
+  .layout{grid-template-columns:170px minmax(0,1fr) 244px;gap:22px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cats{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:1024px){
+  .hero-in{grid-template-columns:1fr;gap:32px;padding:40px 20px 36px}
+  .hero-visual{max-width:520px}
+  .layout{grid-template-columns:minmax(0,1fr) 260px;gap:24px}
+  .channel-col{position:static;grid-column:1/-1;order:-1}
+  .chan-list{display:flex;flex-wrap:wrap;gap:4px;padding:10px}
+  .chan-list li{flex:0 0 auto}
+  .chan-list a{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13.6px}
+  .chan-list .n{display:none}
+  .side-col{position:static}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+}
+@media (max-width:740px){
+  :root{--head-h:58px;--notice-h:36px}
+  .notice{font-size:12px}
+  .header-in{padding:0 14px;gap:12px}
+  .logo-text{font-size:17px}
+  .logo-text small{display:none}
+  .search input{width:96px}
+  .head-tools .btn-ghost{display:none}
+  .wrap{padding:0 14px}
+  .hero-in{padding:32px 14px 30px}
+  .hero-meta{gap:18px}
+  .layout{grid-template-columns:1fr;gap:22px;padding:24px 0 10px}
+  .cards{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr 1fr}
+  .updates{grid-template-columns:1fr;padding:6px 16px}
+  .upd:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+  .upd:last-child{border-bottom:0}
+  .comments{grid-template-columns:1fr}
+  .article{padding:22px 18px}
+  .overview{padding:20px 18px}
+  .news-item{grid-template-columns:96px 1fr;padding:12px 14px;gap:12px}
+  .news-item img{width:96px;height:66px}
+  .step{grid-template-columns:36px 1fr;padding:15px 16px;gap:12px}
+  .step-n{width:36px;height:36px;font-size:15px;border-radius:10px}
+  .footer-top{grid-template-columns:1fr;gap:24px}
+  .search{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice" role="region" aria-label="站点公告">
+  <div class="notice-in">
+    <span class="dot" aria-hidden="true"></span>
+    <span>本周新增 <b>12 份</b> 编织图解与 <b>4 场</b> 社区活动报名 · 冬季「织暖行动」围巾认领已开启</span>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="header">
+  <div class="header-in">
+    <a class="logo" href="/#top" aria-label="小区一级毛 首页">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18.5" fill="#f6e7e1" stroke="#b1452c" stroke-width="1.6"/>
+        <path d="M13 27c0-7 2-13 7-13s7 6 7 13" fill="none" stroke="#b1452c" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M8 24c3-1 6-4 7-8M32 24c-3-1-6-4-7-8" fill="none" stroke="#2f6d5f" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="20" cy="11.5" r="2.4" fill="#c08a2e"/>
+      </svg>
+      <span class="logo-text">小区一级毛<small>XIAOQU YIJI MAO</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="/#overview">社群概览</a>
+      <a href="/#featured">精选作品</a>
+      <a href="/#updates">最新动态</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">入门路径</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#rank">社区榜单</a>
+    </nav>
+    <div class="head-tools">
+      <form class="search" role="search" onsubmit="return false;">
+        <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">站内搜索</label>
+        <input id="q" type="search" placeholder="搜图解 / 毛线 / 活动" autocomplete="off">
+        <button type="button" id="searchBtn">查找</button>
+      </form>
+      <a class="btn btn-ghost" href="/#cats">加入社群</a>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div>
+      <span class="hero-badge">社区编织手作社群 · 2019 年成立 · 覆盖 46 个小区</span>
+      <h1>小区一级毛</h1>
+      <p class="hero-sub">
+        一个由邻里自发组织、专注毛线手作的社区品牌。这里收录团购毛线的实测清单、可打印的编织图解、每月的作品展与「织暖行动」公益认领，也记录谁在楼下长椅上教会了谁起针。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#featured">看本周精选图解</a>
+        <a class="btn btn-ghost" href="/#guide">新手从哪开始</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>318</b>份图解收录</div>
+        <div><b>46</b>个参与小区</div>
+        <div><b>2,140</b>位在册织友</div>
+        <div><b>11/28</b>冬季作品展</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="hero-svg" viewBox="0 0 480 380" role="img" aria-label="毛线球、棒针与围巾构成的手作插画">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#c9563a"/><stop offset="1" stop-color="#8a3220"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fdf7f2"/><stop offset="1" stop-color="#f0e3d9"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="480" height="380" rx="22" fill="url(#g2)"/>
+        <circle cx="384" cy="76" r="52" fill="#e3f0ec"/>
+        <circle cx="88" cy="300" r="40" fill="#f6e7e1"/>
+        <!-- 毛线球 -->
+        <g transform="translate(178,196)">
+          <circle r="86" fill="url(#g1)"/>
+          <path d="M-78 -30c40 26 78 46 132 60M-82 6c44 18 88 30 140 40M-70 46c34 8 70 12 116 14M-52 -64c26 30 54 58 92 84M-16 -82c14 40 34 74 62 104" fill="none" stroke="#f6d9cd" stroke-width="3.4" stroke-linecap="round" opacity=".7"/>
+        </g>
+        <!-- 棒针 -->
+        <g stroke="#8a6b4f" stroke-width="7" stroke-linecap="round">
+          <line x1="96" y1="92" x2="286" y2="278"/>
+          <line x1="332" y1="92" x2="150" y2="278"/>
+        </g>
+        <circle cx="96" cy="92" r="10" fill="#c08a2e"/>
+        <circle cx="332" cy="92" r="10" fill="#c08a2e"/>
+        <!-- 围巾 -->
+        <g transform="translate(300,286) rotate(-8)">
+          <rect x="0" y="0" width="132" height="34" rx="8" fill="#2f6d5f" opacity=".92"/>
+          <g stroke="#8fc0b1" stroke-width="2.4" opacity=".8">
+            <line x1="12" y1="4" x2="12" y2="30"/><line x1="34" y1="4" x2="34" y2="30"/>
+            <line x1="56" y1="4" x2="56" y2="30"/><line x1="78" y1="4" x2="78" y2="30"/>
+            <line x1="100" y1="4" x2="100" y2="30"/><line x1="120" y1="4" x2="120" y2="30"/>
+          </g>
+        </g>
+        <g fill="#b1452c" opacity=".5">
+          <circle cx="62" cy="120" r="4"/><circle cx="414" cy="196" r="5"/><circle cx="428" cy="300" r="3.5"/>
+        </g>
+      </svg>
+      <div class="hero-note">「织暖行动」第 7 季<br><b>已认领 268 / 400 条围巾</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 主布局：三栏门户 -->
+<div class="wrap">
+  <div class="layout">
+
+    <!-- 左：频道索引 -->
+    <aside class="channel-col" aria-label="频道索引">
+      <div class="panel">
+        <p class="panel-title">频道索引</p>
+        <ul class="chan-list">
+          <li><a href="/#cats">图解库 <span class="n">318</span></a></li>
+          <li><a href="/#cats">毛线团购 <span class="n">27</span></a></li>
+          <li><a href="/#cats">棒针基础 <span class="n">64</span></a></li>
+          <li><a href="/#cats">钩针入门 <span class="n">58</span></a></li>
+          <li><a href="/#cats">围巾与帽子 <span class="n">41</span></a></li>
+          <li><a href="/#cats">宝宝织物 <span class="n">33</span></a></li>
+          <li><a href="/#cats">旧线改造 <span class="n">22</span></a></li>
+          <li><a href="/#cats">织暖公益 <span class="n">7</span></a></li>
+          <li><a href="/#rank">社区榜单 <span class="n">Top 8</span></a></li>
+          <li><a href="/#comments">织友留言 <span class="n">16</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 中：主内容 -->
+    <main>
+      <div class="search-bar" id="searchBar" role="status" aria-live="polite">
+        <span id="searchText"></span>
+        <button type="button" id="clearSearch">清除筛选</button>
+      </div>
+      <div class="no-result" id="noResult">
+        没有找到匹配的条目。可以换个关键词，比如「围巾」「钩针」「团购」「织暖」。
+      </div>
+
+      <!-- 1. 主题领域概览 -->
+      <section class="block" id="overview">
+        <div class="block-head">
+          <h2>这个社群在做什么</h2>
+          <a class="more-link" href="/#deep">读完整说明 →</a>
+        </div>
+        <div class="overview">
+          <p>
+            <span class="hl">小区一级毛</span>做的是一件很具体的事：把「买毛线、学图解、织东西、送出去」这条链路，压缩到一个小区的步行距离之内。它不是一个电商店铺，也不是纯粹的兴趣论坛，而是由几十位常驻织友共同维护的手作资料库和线下活动组织。
+          </p>
+          <p>
+            内容大致分四类。第一类是<b>图解与教程</b>，覆盖棒针、钩针、阿富汗针三种工具，从最基础的起针、上下针、环形起针，到麻花、提花、蕾丝镂空等进阶技法，每份图解都标注了用线量、针号和建议成品尺寸。第二类是<b>毛线团购与实测</b>，社群每月组织一次集中采购，参团前会先由三位织友试用同批毛线，记录缩水率、起球情况、色差和手感，形成一份可对照的实测记录。第三类是<b>作品与展览</b>，每季度在小区活动室办一次实物展，2026 年 11 月 28 日的冬季展已确认 63 件参展作品。第四类是<b>公益与互助</b>，「织暖行动」把围巾、帽子、婴儿毯送到对口社区养老院和儿童服务站，同时也接受旧毛衣拆线再利用的捐赠。
+          </p>
+          <p>
+            目前站内值得优先关注的具体内容有：11 月 20 日上线的<b>《双面麻花围巾·无接缝版》</b>图解、11 月 18 日完成的<b>「雪尼尔混纺 8 股」团购实测</b>、11 月 12 日开始的<b>冬季作品展报名</b>，以及每周三晚在 3 号楼活动室进行的<b>新手起针答疑</b>。如果你是刚搬来的住户，建议先看「新手入门路径」，再挑一份难度标为「一颗扣子」的图解动手。
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="block" id="featured">
+        <div class="block-head">
+          <h2>本周精选图解与实测</h2>
+          <a class="more-link" href="/#cats">全部 318 份 →</a>
+        </div>
+        <p class="block-lead">按「最近 7 天新增 + 织友完成度」排序，每份都附有实际用线量与常见踩坑点。</p>
+        <div class="cards" id="cardGrid">
+
+          <article class="card" data-k="双面麻花围巾 棒针 围巾 冬季">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/xqm-weiJin01/400/300" width="400" height="300" loading="lazy" alt="双面麻花围巾成品展示，米白色粗线麻花纹路">
+              <span class="card-tag">棒针 · 围巾</span>
+            </div>
+            <div class="card-body">
+              <h3>双面麻花围巾·无接缝版</h3>
+              <p class="desc">正反两面麻花方向相反，收针处用厨房er针法藏线。用 5.5mm 环形针起 48 针，中粗线约 3 团可织 165cm，新手最容易卡在第 6 行的交叉针。</p>
+              <div class="tags"><span class="tag">棒针</span><span class="tag">麻花</span><span class="tag green">难度：两颗扣</span></div>
+              <div class="card-foot"><span>11-20 更新</span><span class="score">4.9 · 完成 87 人</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-k="钩针 宝宝鞋 婴儿 钩针入门">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/xqm-baobao02/400/300" width="400" height="300" loading="lazy" alt="钩针编织的婴儿软底鞋，浅黄色棉线">
+              <span class="card-tag">钩针 · 宝宝织物</span>
+            </div>
+            <div class="card-body">
+              <h3>婴儿软底鞋·3 小时速成</h3>
+              <p class="desc">只用短针、长针和引拔三种针法，鞋底 12 针起钩，鞋帮转圈不加不减。用 3.0mm 钩针配五股牛奶棉，一双约 30g，适合当满月礼。</p>
+              <div class="tags"><span class="tag">钩针</span><span class="tag">宝宝鞋</span><span class="tag green">难度：一颗扣</span></div>
+              <div class="card-foot"><span>11-17 更新</span><span class="score">4.8 · 完成 132 人</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-k="雪尼尔 毛线团购 实测 缩水">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/xqm-tuangou03/400/300" width="400" height="300" loading="lazy" alt="雪尼尔混纺毛线团购实测，多色线团并排摆放">
+              <span class="card-tag">团购 · 实测</span>
+            </div>
+            <div class="card-body">
+              <h3>雪尼尔混纺 8 股·团购实测</h3>
+              <p class="desc">三位织友各洗三次，缩水率分别是 3.1%、3.4%、2.8%，起球集中在摩擦部位。色差方面，雾霾蓝与实物偏差最小，砖红偏暗半档，建议下单前看实拍。</p>
+              <div class="tags"><span class="tag">团购</span><span class="tag">雪尼尔</span><span class="tag green">实测报告</span></div>
+              <div class="card-foot"><span>11-18 发布</span><span class="score">团购价 ¥19.8/团</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-k="提花 毛衣 棒针 进阶 冬季">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/xqm-tihua04/400/300" width="400" height="300" loading="lazy" alt="提花毛衣编织过程，蓝色与白色几何图案">
+              <span class="card-tag">棒针 · 提花</span>
+            </div>
+            <div class="card-body">
+              <h3>几何提花圆肩毛衣</h3>
+              <p class="desc">从上往下织，育克部分 4 种配色交替，图解已按 S/M/L 三档标注加针点。难点是背面浮线张力，正文附了压线的三种处理方式对比。</p>
+              <div class="tags"><span class="tag">提花</span><span class="tag">毛衣</span><span class="tag green">难度：四颗扣</span></div>
+              <div class="card-foot"><span>11-14 更新</span><span class="score">4.7 · 完成 19 人</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-k="旧毛衣 拆线 改造 环保 回收">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/xqm-jiuxian05/400/300" width="400" height="300" loading="lazy" alt="旧毛衣拆线后重新绕成线团的工作台">
+              <span class="card-tag">改造 · 旧线</span>
+            </div>
+            <div class="card-body">
+              <h3>旧毛衣拆线再利用·完整流程</h3>
+              <p class="desc">从拆缝、绕绞、温水定型到重新绕球，四步讲清。重点在洗缩过的羊毛线要低温加护发素复软，实测能恢复约 85% 的蓬松度，断线接头用俄式接法。</p>
+              <div class="tags"><span class="tag">旧线改造</span><span class="tag">环保</span><span class="tag green">省线约 60%</span></div>
+              <div class="card-foot"><span>11-11 更新</span><span class="score">4.6 · 收藏 214</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-k="织暖 公益 围巾 认领 养老院">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/xqm-zhinuan06/400/300" width="400" height="300" loading="lazy" alt="织暖行动捐赠的红色围巾整齐叠放">
+              <span class="card-tag">公益 · 织暖</span>
+            </div>
+            <div class="card-body">
+              <h3>织暖行动第 7 季·围巾认领</h3>
+              <p class="desc">目标 400 条，尺寸统一为 22×150cm，颜色不限但需耐脏。认领后 12 月 20 日前交到 3 号楼活动室，统一送对口养老院。已完成 268 条，缺口 132 条。</p>
+              <div class="tags"><span class="tag">织暖行动</span><span class="tag">围巾</span><span class="tag green">公益</span></div>
+              <div class="card-foot"><span>11-12 启动</span><span class="score">已认领 268 条</span></div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 3. 最新动态 -->
+      <section class="block" id="updates">
+        <div class="block-head">
+          <h2>最新更新与动态</h2>
+          <a class="more-link" href="/#news">更多资讯 →</a>
+        </div>
+        <div class="updates">
+          <div class="upd"><span class="upd-time">今天 09:30</span><div class="upd-main"><b>《双面麻花围巾·无接缝版》勘误更新</b><span>第 14 行交叉针图解方向标注修正，已下载的织友请重新取图。</span></div></div>
+          <div class="upd"><span class="upd-time">今天 08:10</span><div class="upd-main"><b>冬季作品展报名截止倒计时 3 天</b><span>已收到 63 件参展作品，围巾类 24 件、毛衣类 15 件，其余为帽子与家居织物。</span></div></div>
+          <div class="upd"><span class="upd-time">昨天 21:10</span><div class="upd-main"><b>12 月毛线团购开团：羊驼混纺 6 股</b><span>起订 8 团，满 120 团可再降 1.5 元，11 月 30 日 20:00 截单。</span></div></div>
+          <div class="upd"><span class="upd-time">昨天 16:40</span><div class="upd-main"><b>3 号楼活动室本周三起针答疑改到 19:30</b><span>因楼下有亲子活动，时间后移半小时，带针带线即可，无需报名。</span></div></div>
+          <div class="upd"><span class="upd-time">11-23 20:05</span><div class="upd-main"><b>「钩针玫瑰」图解被收藏 500 次</b><span>本周收藏增长最快的入门图解，附赠花梗缠线的两种做法。</span></div></div>
+          <div class="upd"><span class="upd-time">11-22 14:20</span><div class="upd-main"><b>织友@阿棠 完成第 100 条公益围巾</b><span>累计用时 11 个月，社群在活动室为她办了一个小型交付仪式。</span></div></div>
+          <div class="upd"><span class="upd-time">11-21 10:35</span><div class="upd-main"><b>新增「宝宝织物」频道安全用线提示</b><span>标注了 A 类婴幼儿用线标准，以及哪些混纺不建议贴肤使用。</span></div></div>
+          <div class="upd"><span class="upd-time">11-20 19:00</span><div class="upd-main"><b>「旧线改造」工作坊第 4 期开放 20 个名额</b><span>12 月 6 日下午，教拆线与复软，需自带旧毛衣一件。</span></div></div>
+          <div class="upd"><span class="upd-time">11-19 11:15</span><div class="upd-main"><b>雪尼尔混纺实测报告补充色卡</b><span>新增 6 个色号的自然光与室内光对比照片，减少线上选色偏差。</span></div></div>
+          <div class="upd"><span class="upd-time">11-18 09:50</span><div class="upd-main"><b>棒针基础频道新增「上下针松紧对照表」</b><span>列出 6 种针号在同一线材下的织物密度差异，方便先算再织。</span></div></div>
+        </div>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="block" id="cats">
+        <div class="block-head">
+          <h2>按类别找内容</h2>
+          <a class="more-link" href="/#rec">延伸方向 →</a>
+        </div>
+        <div class="cats">
+          <a class="cat" href="/#featured"><b>棒针基础</b><span>起针、上下针、环形针、收针，64 份带图示</span><span class="cnt">64 份图解</span></a>
+          <a class="cat" href="/#featured"><b>钩针入门</b><span>短针、长针、引拔、花片拼接，58 份含视频要点</span><span class="cnt">58 份图解</span></a>
+          <a class="cat" href="/#featured"><b>围巾与帽子</b><span>冬季高频品类，标注用线量与成品尺寸</span><span class="cnt">41 份图解</span></a>
+          <a class="cat" href="/#featured"><b>宝宝织物</b><span>软底鞋、连体衣、抱被，附安全用线提示</span><span class="cnt">33 份图解</span></a>
+          <a class="cat" href="/#featured"><b>毛线团购</b><span>每月一团，参团前先看三位织友实测</span><span class="cnt">27 期记录</span></a>
+          <a class="cat" href="/#featured"><b>旧线改造</b><span>拆线、复软、拼接，旧毛衣的第二条命</span><span class="cnt">22 份流程</span></a>
+          <a class="cat" href="/#featured"><b>提花与麻花</b><span>进阶技法，附浮线张力与交叉针处理</span><span class="cnt">18 份图解</span></a>
+          <a class="cat" href="/#featured"><b>织暖公益</b><span>围巾认领、捐赠去向、交付时间表</span><span class="cnt">7 期活动</span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="block" id="deep">
+        <div class="block-head">
+          <h2>深度解析：一份图解值不值得动手</h2>
+          <a class="more-link" href="/#guide">看入门路径 →</a>
+        </div>
+        <div class="article">
+          <h3>先分清「图解」和「成品照」是两件事</h3>
+          <p>
+            在小区一级毛的图解库里，每一份条目上方都有一张成品照，但真正决定你能不能织出来的是下面的结构信息：针号、线材、密度、尺寸和分步骤的针数表。很多新手会照着一张好看的成品图下单买线，结果发现原图只给了成品照片而没有针数表，最后只能凭感觉织，尺寸全偏。判断一份图解是否可用，先看它有没有「密度行」——也就是 10cm×10cm 内有多少针多少行。没有这一行的图解，只能当灵感参考，不能当施工图。
+          </p>
+          <h3>三种工具的实际差异，比想象中大</h3>
+          <p>
+            棒针、钩针、阿富汗针在同一个品类上的表现完全不同。以围巾为例：
+          </p>
+          <ul>
+            <li><b>棒针</b>织出的平针有弹性，垂坠感好，适合麻花和罗纹，但翻面容易卷边，收针要额外处理。</li>
+            <li><b>钩针</b>结构稳定、不易变形，适合花片拼接和镂空，但同样厚度下用线量比棒针多约 20%。</li>
+            <li><b>阿富汗针</b>介于两者之间，正面像棒针、背面像钩针，适合做厚实的坐垫和毯子，但长针数会让手腕负担明显增加。</li>
+          </ul>
+          <p>
+            社群里的实际经验是：第一次做围巾选棒针平针或简单罗纹，第一次做玩偶选钩针短针，第一次做毯子选阿富汗针。反过来做，挫败感会明显上升。
+          </p>
+          <h3>用线量怎么估，才不会买到一半断货</h3>
+          <p>
+            图解标注的用线量通常是「理论值」，实际会因为你手松手紧浮动 10%—15%。社群的做法是先用同线材织一个 10cm 见方的小样，称重后按成品面积换算，再上浮 15% 作为采购量。以中粗线织一条 22×150cm 的围巾为例，小样称重 14g，成品面积约为小样的 16.5 倍，理论用量约 231g，上浮后按 270g 备线，也就是 3 团（每团 100g）比较稳妥。
+          </p>
+          <div class="callout">
+            团购时最容易踩的坑不是价格，而是<b>同批次色差</b>。同一色号不同缸号混织，成品在自然光下会出现明显色带。社群团购统一按缸号分装，下单时请确认是否需要「同缸号」备注。
+          </div>
+          <h3>难度分级：四颗扣子怎么读</h3>
+          <table>
+            <thead><tr><th>难度</th><th>典型技法</th><th>预计耗时</th><th>适合谁</th></tr></thead>
+            <tbody>
+              <tr><td>一颗扣</td><td>平针、短针、简单加减针</td><td>2—4 小时</td><td>刚学会起针的人</td></tr>
+              <tr><td>两颗扣</td><td>麻花、引返、环形起针</td><td>6—12 小时</td><td>完成过 2 件以上成品</td></tr>
+              <tr><td>三颗扣</td><td>花片拼接、简单提花、缝合</td><td>15—25 小时</td><td>能独立看图解的人</td></tr>
+              <tr><td>四颗扣</td><td>多色提花、育克加针、立体塑形</td><td>30 小时以上</td><td>有毛衣成品经验的人</td></tr>
+            </tbody>
+          </table>
+          <h3>成品之后的收尾，决定它能不能穿出门</h3>
+          <p>
+            很多人织完就急着剪线，结果洗一次就变形。正确的收尾顺序是：先藏线头（至少穿过 6—8 针背面），再冷水浸泡 20 分钟定型，平铺阴干，最后按成品尺寸轻轻拉伸固定。羊毛线定型后针目会自然均匀，棉线则要注意不要悬挂晾晒，否则会拉长。社群每季度会组织一次「定型日」，活动室提供定型垫和蒸汽熨斗，织友带着刚下机的成品来一起处理。
+          </p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="block" id="guide">
+        <div class="block-head">
+          <h2>新手入门路径：从第一针到第一件成品</h2>
+          <a class="more-link" href="/#faq">看常见问题 →</a>
+        </div>
+        <p class="block-lead">按这个顺序走，大多数人能在三周内完成第一件能送人的成品。</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-n">1</div>
+            <div><h4>先定工具，别一次买齐</h4><p>只买一副 <b>5.5mm 环形针</b> 或一支 <b>3.0mm 钩针</b>，配两团中粗棉线。工具越简单，越容易进入状态。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-n">2</div>
+            <div><h4>用「一颗扣」图解练手</h4><p>推荐《婴儿软底鞋·3 小时速成》或《钩针玫瑰》，两件都用不到三种针法，完成率高，失败成本低。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-n">3</div>
+            <div><h4>织一块 10cm 小样并称重</h4><p>这一步决定了你后面买多少线。把小样重量、针号、线材记在手机备忘录里，下次直接复用。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-n">4</div>
+            <div><h4>参加一次周三起针答疑</h4><p>现场看别人怎么持针、怎么绕线，比自己看视频快得多。活动室提供备用针，空手来也行。</p></div>
+          </div>
+          <div class="step">
+            <div class="step-n">5</div>
+            <div><h4>挑一件「两颗扣」成品作为第一个正式作品</h4><p>《双面麻花围巾·无接缝版》是最常见的选择，完成时间约 8—10 小时，织完可以直接进冬季展。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="block" id="faq">
+        <div class="block-head"><h2>常见问题</h2></div>
+        <div class="faq">
+          <details open>
+            <summary>第一次接触毛线手作，从哪个条目开始比较好？</summary>
+            <p>建议从难度标为「一颗扣」的《婴儿软底鞋·3 小时速成》开始。它只用到短针、长针、引拔三种针法，材料成本不到 20 元，即使织坏了也不会太心疼。如果更想织围巾，可以先看《平针罗纹围巾·基础版》，再过渡到双面麻花。</p>
+          </details>
+          <details>
+            <summary>棒针和钩针，初学者应该先学哪个？</summary>
+            <p>看你想要的成品。围巾、毛衣、袜子这类有弹性的织物，棒针更合适；玩偶、花片、杯垫、包袋这类需要结构稳定的，钩针更合适。两者上手难度接近，但钩针的错误更容易拆回，容错率稍高一些。</p>
+          </details>
+          <details>
+            <summary>团购的毛线一般多久到货？可以只买一团吗？</summary>
+            <p>团购每月一期，截单后统一向厂家下单，通常 7—10 天到货，到货后在 3 号楼活动室自取或由楼栋联络人代领。起订量一般是 8 团，单团下单需要等其他织友拼单，社群会在群里发起拼团接龙。</p>
+          </details>
+          <details>
+            <summary>图解里的「密度」到底怎么测？</summary>
+            <p>用你打算使用的针和线，织一块约 15cm×15cm 的平针小样，定型后量中间 10cm 宽有多少针、10cm 高有多少行。如果针数比图解多，说明你手紧，换大半号或一号针；如果少，说明手松，换小半号。密度对了，成品尺寸才会对。</p>
+          </details>
+          <details>
+            <summary>织暖行动的围巾有什么尺寸和材质要求？</summary>
+            <p>统一要求 22×150cm，颜色不限但建议选耐脏的深色或中性色。材质上优先羊毛混纺或腈纶混纺，避免纯棉（保暖性不足）和易掉毛的长毛绒线。交件前请先冷水定型并藏好线头，12 月 20 日前交到活动室。</p>
+          </details>
+          <details>
+            <summary>旧毛衣拆下来的线可以直接用吗？</summary>
+            <p>不能直接用。拆下来的线是弯曲的，需要先绕成绞，用温水加少量护发素浸泡 20 分钟，晾干后再绕成球，织出来的针目才会均匀。如果原毛衣是缩水过的羊毛，复软后大约能恢复 85% 的蓬松度，建议用于围巾、坐垫这类对弹性要求不高的成品。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="block" id="comments">
+        <div class="block-head">
+          <h2>织友留言</h2>
+          <a class="more-link" href="/#rank">看社区榜单 →</a>
+        </div>
+        <div class="comments">
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#b1452c">棠</span><span class="cmt-name">阿棠</span><span class="cmt-meta">11-24</span></div><p>第 100 条围巾交掉了，用的是《双面麻花围巾》那份图解，改成了平针版，速度快了不少。<span class="on">织暖行动</span>今年缺口还有 132 条，有空的织友真的可以认领一条。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2f6d5f">林</span><span class="cmt-name">林小满</span><span class="cmt-meta">11-24</span></div><p>雪尼尔那份实测挺有用的，我按报告选了雾霾蓝，收到确实和图片接近。砖红我朋友买了，说偏暗，建议介意色差的先看实拍再下单。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#c08a2e">周</span><span class="cmt-name">周周织不完</span><span class="cmt-meta">11-23</span></div><p>提花毛衣那份图解难度写四颗扣是诚实的，我织到育克第三组花样就拆了两次。浮线张力那段讲得比视频清楚，但真的需要耐心。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7a5c8f">陈</span><span class="cmt-name">陈默</span><span class="cmt-meta">11-23</span></div><p>周三答疑改到 19:30 之后我反而能赶上了，之前六点半下班来不及。带了自己的针去，被纠正了持针姿势，快很多。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#3f6f9c">许</span><span class="cmt-name">许一针</span><span class="cmt-meta">11-22</span></div><p>旧线改造那篇流程写得细，特别是护发素复软那步。我拆了两件旧毛衣，复软之后手感确实回来了，就是绕线绕到手酸。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#a0522d">何</span><span class="cmt-name">何阿姨</span><span class="cmt-meta">11-22</span></div><p>宝宝鞋图解很友好，我孙女满月我织了三双。提醒一下用五股牛奶棉的话针号要小半号，不然鞋底会松。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4a7c59">苏</span><span class="cmt-name">苏打水</span><span class="cmt-meta">11-21</span></div><p>麻花围巾第 14 行那个方向标注确实有问题，我织出来两面麻花方向一样了。勘误更新之后重新对了图，现在正常。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#8a3220">顾</span><span class="cmt-name">顾小楼</span><span class="cmt-meta">11-21</span></div><p>希望团购能多一些细线选择，现在大部分是中粗和粗线，夏天能织的线材偏少。整体体验还是好的，就是这点想提一下。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2f6d5f">郑</span><span class="cmt-name">郑一织</span><span class="cmt-meta">11-20</span></div><p>小样称重估线量这个方法真的省钱，我以前总是多买两团放着。现在按 15% 上浮备线，基本不剩。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#b1452c">白</span><span class="cmt-name">白露</span><span class="cmt-meta">11-19</span></div><p>第一次参加作品展，交了顶帽子。现场看到别人的实物比照片震撼多了，尤其是那件几何提花毛衣。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#c08a2e">吴</span><span class="cmt-name">吴桐</span><span class="cmt-meta">11-19</span></div><p>阿富汗针的坐垫我织了一个，手感确实厚实，但连续两小时手腕会疼，建议分次织。图解本身没问题。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7a5c8f">沈</span><span class="cmt-name">沈青</span><span class="cmt-meta">11-18</span></div><p>钩针玫瑰那份收藏了，花梗缠线的第二种做法比第一种稳，做了一束送人，反馈不错。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#3f6f9c">韩</span><span class="cmt-name">韩梅</span><span class="cmt-meta">11-18</span></div><p>定型日能不能多办几次？我住得远，一个月一次有时候赶不上。蒸汽熨斗那步自己在家不太好操作。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4a7c59">方</span><span class="cmt-name">方也</span><span class="cmt-meta">11-17</span></div><p>入门路径写得实在，没有一上来就让人买一堆工具。我就是按这个顺序走的，三周织完了第一条围巾。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#a0522d">邵</span><span class="cmt-name">邵邵</span><span class="cmt-meta">11-16</span></div><p>希望图解库能按用线量筛选，我想找那种一团线就能织完的小东西，现在只能一个个点开看。</p></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#8a3220">钱</span><span class="cmt-name">钱多多</span><span class="cmt-meta">11-15</span></div><p>团购拼单在群里接龙挺方便的，就是到货通知有时候不及时，建议到货后统一在公告条里说一声。</p></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="block" id="news">
+        <div class="block-head">
+          <h2>相关资讯</h2>
+          <a class="more-link" href="/#updates">看全部动态 →</a>
+        </div>
+        <div class="news">
+          <div class="news-item">
+            <img src="https://picsum.photos/seed/xqm-zixun01/600/400" width="132" height="80" loading="lazy" alt="冬季作品展布展现场，围巾与毛衣挂在展架上">
+            <div><h4><time>11-23</time>冬季作品展确认 63 件参展，围巾类占比最高</h4><p>展览 11 月 28 日在 3 号楼活动室开放，现场设试织体验区，提供备用针线。</p></div>
+          </div>
+          <div class="news-item">
+            <img src="https://picsum.photos/seed/xqm-zixun02/600/400" width="132" height="80" loading="lazy" alt="羊驼混纺毛线样品，浅驼色线团近景">
+            <div><h4><time>11-22</time>12 月团购确定为羊驼混纺 6 股，满 120 团再降价</h4><p>起订 8 团，11 月 30 日 20:00 截单，到货预计 12 月 8 日前后。</p></div>
+          </div>
+          <div class="news-item">
+            <img src="https://picsum.photos/seed/xqm-zixun03/600/400" width="132" height="80" loading="lazy" alt="旧线改造工作坊现场，织友围坐拆线">
+            <div><h4><time>11-20</time>旧线改造工作坊第 4 期开放 20 个名额</h4><p>12 月 6 日下午进行，内容为拆线、复软与接头处理，需自带旧毛衣一件。</p></div>
+          </div>
+          <div class="news-item">
+            <img src="https://picsum.photos/seed/xqm-zixun04/600/400" width="132" height="80" loading="lazy" alt="婴幼儿用线安全标准资料与棉线样品">
+            <div><h4><time>11-19</time>宝宝织物频道补充婴幼儿用线安全提示</h4><p>标注 A 类标准与不建议贴肤的混纺类型，图解页同步增加提示条。</p></div>
+          </div>
+          <div class="news-item">
+            <img src="https://picsum.photos/seed/xqm-zixun05/600/400" width="132" height="80" loading="lazy" alt="棒针织物密度小样与尺子测量">
+            <div><h4><time>11-18</time>棒针基础新增上下针松紧对照表</h4><p>覆盖 6 种针号在同一线材下的密度差异，帮助织前先算再织。</p></div>
+          </div>
+          <div class="news-item">
+            <img src="https://picsum.photos/seed/xqm-zixun06/600/400" width="132" height="80" loading="lazy" alt="织友交付公益围巾的合影">
+            <div><h4><time>11-15</time>织暖行动累计交付突破 268 条围巾</h4><p>本季目标 400 条，12 月 20 日截止收件，缺口 132 条仍在认领中。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="block" id="rec">
+        <div class="block-head">
+          <h2>延伸方向</h2>
+          <a class="more-link" href="/#cats">回到分类 →</a>
+        </div>
+        <div class="rec-tags">
+          <a href="/#featured">麻花交叉针怎么不歪 <i>技法</i></a>
+          <a href="/#featured">环形起针收口不留洞 <i>技法</i></a>
+          <a href="/#featured">宝宝织物安全用线标准 <i>选购</i></a>
+          <a href="/#featured">雪尼尔与羊驼混纺对比 <i>比较</i></a>
+          <a href="/#featured">拆线后如何复软 <i>旧线</i></a>
+          <a href="/#featured">提花浮线压线三法 <i>进阶</i></a>
+          <a href="/#featured">围巾定型与收纳 <i>收尾</i></a>
+          <a href="/#featured">一团线能织完的小物清单 <i>清单</i></a>
+        </div>
+      </section>
+
+      <!-- 11. 补充板块：社区榜单 -->
+      <section class="block" id="rank">
+        <div class="block-head">
+          <h2>社区榜单 · 11 月完成度排行</h2>
+          <a class="more-link" href="/#comments">看留言 →</a>
+        </div>
+        <div class="rank">
+          <div class="rank-row"><span class="rank-n">1</span><div><b>婴儿软底鞋·3 小时速成<small>本月完成 132 人 · 钩针</small></b></div><span class="rank-bar"><i style="width:96%"></i></span></div>
+          <div class="rank-row"><span class="rank-n">2</span><div><b>双面麻花围巾·无接缝版<small>本月完成 87 人 · 棒针</small></b></div><span class="rank-bar"><i style="width:82%"></i></span></div>
+          <div class="rank-row"><span class="rank-n">3</span><div><b>钩针玫瑰·花束版<small>本月完成 76 人 · 钩针</small></b></div><span class="rank-bar"><i style="width:71%"></i></span></div>
+          <div class="rank-row"><span class="rank-n">4</span><div><b>平针罗纹围巾·基础版<small>本月完成 64 人 · 棒针</small></b></div><span class="rank-bar"><i style="width:61%"></i></span></div>
+          <div class="rank-row"><span class="rank-n">5</span><div><b>杯垫花片·六角拼<small>本月完成 51 人 · 钩针</small></b></div><span class="rank-bar"><i style="width:52%"></i></span></div>
+          <div class="rank-row"><span class="rank-n">6</span><div><b>旧毛衣拆线改造·坐垫<small>本月完成 38 人 · 综合</small></b></div><span class="rank-bar"><i style="width:44%"></i></span></div>
+          <div class="rank-row"><span class="rank-n">7</span><div><b>几何提花圆肩毛衣<small>本月完成 19 人 · 棒针</small></b></div><span class="rank-bar"><i style="width:31%"></i></span></div>
+          <div class="rank-row"><span class="rank-n">8</span><div><b>阿富汗针厚坐垫<small>本月完成 14 人 · 阿富汗针</small></b></div><span class="rank-bar"><i style="width:23%"></i></span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右：辅助栏 -->
+    <aside class="side-col" aria-label="辅助信息">
+      <div class="panel side-block">
+        <p class="panel-title">近期活动</p>
+        <ul class="side-list">
+          <li><a href="/#updates">周三起针答疑<span class="d">11-25 19:30 · 3 号楼活动室</span></a></li>
+          <li><a href="/#news">冬季作品展<span class="d">11-28 全天 · 活动室展厅</span></a></li>
+          <li><a href="/#updates">12 月毛线团购截单<span class="d">11-30 20:00 截止</span></a></li>
+          <li><a href="/#news">旧线改造工作坊<span class="d">12-06 14:00 · 限 20 人</span></a></li>
+          <li><a href="/#featured">织暖围巾交件截止<span class="d">12-20 前交至活动室</span></a></li>
+        </ul>
+      </div>
+
+      <div class="panel side-block">
+        <p class="panel-title">热门标签</p>
+        <div class="mini-tag">
+          <a href="/#featured">麻花</a><a href="/#featured">钩针玫瑰</a><a href="/#featured">宝宝鞋</a>
+          <a href="/#featured">提花</a><a href="/#featured">雪尼尔</a><a href="/#featured">旧线改造</a>
+          <a href="/#featured">织暖行动</a><a href="/#featured">定型</a><a href="/#featured">密度</a>
+        </div>
+      </div>
+
+      <div class="panel side-block">
+        <p class="panel-title">数据说明</p>
+        <div class="side-note">
+          图解数量与完成人数为社群后台统计，<b>更新至 2026-11-25</b>。团购价与库存以当期开团公告为准，实测数据由三位常驻织友独立记录后取平均。
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页尾 -->
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18.5" fill="#3b312c" stroke="#c9563a" stroke-width="1.6"/>
+            <path d="M13 27c0-7 2-13 7-13s7 6 7 13" fill="none" stroke="#e8b9a8" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M8 24c3-1 6-4 7-8M32 24c-3-1-6-4-7-8" fill="none" stroke="#8fc0b1" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="11.5" r="2.4" fill="#c08a2e"/>
+          </svg>
+          <span class="logo-text">小区一级毛<small>XIAOQU YIJI MAO</small></span>
+        </div>
+        <p class="footer-desc">社区毛线手作社群，记录图解、团购实测、作品展与织暖公益。由 46 个小区的织友共同维护。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="/#featured">精选图解</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">入门路径</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区</h4>
+        <ul>
+          <li><a href="/#updates">最新动态</a></li>
+          <li><a href="/#comments">织友留言</a></li>
+          <li><a href="/#rank">社区榜单</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="/#featured">织暖围巾认领</a></li>
+          <li><a href="/#updates">毛线团购</a></li>
+          <li><a href="/#news">旧线改造工作坊</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 小区一级毛 · 社区编织手作社群</span>
+      <span>数据统计截至 2026-11-25 · 团购价格与活动安排以当期公告为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('q');
+  var btn = document.getElementById('searchBtn');
+  var bar = document.getElementById('searchBar');
+  var txt = document.getElementById('searchText');
+  var clear = document.getElementById('clearSearch');
+  var noResult = document.getElementById('noResult');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#cardGrid .card'));
+  var blocks = Array.prototype.slice.call(document.querySelectorAll('main section.block'));
+
+  function reset(){
+    cards.forEach(function(c){ c.classList.remove('hide'); });
+    blocks.forEach(function(b){ b.classList.remove('hide'); });
+    bar.classList.remove('show');
+    noResult.classList.remove('show');
+  }
+
+  function run(){
+    var kw = (input.value || '').trim().toLowerCase();
+    if(!kw){ reset(); return; }
+    var hit = 0;
+    cards.forEach(function(c){
+      var k = (c.getAttribute('data-k') || '').toLowerCase() + ' ' + c.textContent.toLowerCase();
+      if(k.indexOf(kw) > -1){ c.classList.remove('hide'); hit++; }
+      else { c.classList.add('hide'); }
+    });
+    blocks.forEach(function(b){
+      if(b.id === 'featured') return;
+      var t = b.textContent.toLowerCase();
+      if(t.indexOf(kw) > -1){ b.classList.remove('hide'); }
+      else { b.classList.add('hide'); }
+    });
+    bar.classList.add('show');
+    txt.textContent = '正在筛选「' + input.value.trim() + '」，命中 ' + hit + ' 张图解卡片。';
+    if(hit === 0){ noResult.classList.add('show'); } else { noResult.classList.remove('show'); }
+  }
+
+  btn.addEventListener('click', run);
+  input.addEventListener('input', function(){
+    if(!input.value.trim()){ reset(); }
+  });
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); run(); }
+  });
+  clear.addEventListener('click', function(){
+    input.value = '';
+    reset();
+    input.focus();
+  });
+})();
+</script>
+</body>
+  </html>
